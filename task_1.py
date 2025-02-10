@@ -4,17 +4,18 @@ class Book:
         self.name = name
         self.author = author
 
+    @property
+    def name(self):
+        return self.name
+    @property
+    def author(self):
+        return self.author
+
     def __str__(self):
         return f"Книга {self.name}. Автор {self.author}"
 
     def __repr__(self):
         return f"{self.__class__.__name__}(name={self.name!r}, author={self.author!r})"
-
-    def get_name(self):
-        return self.name
-
-    def get_author(self):
-        return self.author
 
 
 class PaperBook(Book):
